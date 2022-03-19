@@ -1,25 +1,13 @@
-import biz.paluch.logging.gelf.wildfly.WildFlyGelfLogHandler;
-import biz.paluch.logging.gelf.wildfly.WildFlyJsonFormatter;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintWriter;
-import java.text.DecimalFormat;
-import java.util.Formatter;
-import java.util.Scanner;
-import java.util.logging.*;
-
 public class Main {
 
-    public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
+    /**
+     * Entry point for the application
+     * that will write data to a log file,
+     * before reading back selected data
+     * logs from that file
+     */
+
+    public static void main(String[] args)  {
         Initialize i =  new Initialize();
         Read r = new Read();
         Write w = new Write();
@@ -30,3 +18,5 @@ public class Main {
         r.readFromLog();
     }
 }
+
+

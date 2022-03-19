@@ -3,14 +3,18 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * This class initializes the logger object and defines
+ * a location for log data to be written to.
+ */
+
 public class Initialize {
+
     protected Logger logger = Logger.getLogger("myLog.txt");
 
     public void init(){
-        FileHandler fh;
-        //System.setProperty("java.util.logging.SimpleFormatter.format", "%1$tF   %1$tT   %4$-7s %5$s %n" );
         try{
-            fh = new FileHandler("C:\\Users\\Specialty Shops #3\\Desktop\\Spring 2022\\CEN 4802\\javaLogs\\myLog.txt");
+            FileHandler fh = new FileHandler("myLogs.txt");
             logger.addHandler(fh);
             SimpleFormatter formatter = new SimpleFormatter();
             fh.setFormatter(formatter);

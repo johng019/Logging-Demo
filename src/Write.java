@@ -1,6 +1,14 @@
 import java.text.DecimalFormat;
 import java.util.logging.Level;
 
+/**
+ * This class writes log data to a text file.
+ * The data provided using a simple for loop
+ * that takes the integers 0 thu 100 and
+ * divides 100 by that number.
+ *The returned value or exception is logged
+ */
+
 public class Write extends Initialize{
 
     public void writeToLog(int a) {

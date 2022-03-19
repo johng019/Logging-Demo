@@ -2,10 +2,16 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
+/**
+ * This class parses a log file for log
+ * items with a level of SEVERE or WARNING
+ */
+
 public class Read extends Initialize{
     public static void readFromLog() {
         try {
-            Scanner s = new Scanner(new File("myLog.txt"));
+            File myFile = new File("myLogs.txt");
+            Scanner s = new Scanner(myFile);
             System.out.println("Parsing log for SEVERE and WARNING level records");
             while (s.hasNextLine()) {
                 String line = s.nextLine();
